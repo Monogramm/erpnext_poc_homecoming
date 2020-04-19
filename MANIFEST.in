@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include erpnext_template *.css
-recursive-include erpnext_template *.csv
-recursive-include erpnext_template *.html
-recursive-include erpnext_template *.ico
-recursive-include erpnext_template *.js
-recursive-include erpnext_template *.json
-recursive-include erpnext_template *.md
-recursive-include erpnext_template *.png
-recursive-include erpnext_template *.py
-recursive-include erpnext_template *.svg
-recursive-include erpnext_template *.txt
-recursive-exclude erpnext_template *.pyc
+recursive-include erpnext_poc_homecoming *.css
+recursive-include erpnext_poc_homecoming *.csv
+recursive-include erpnext_poc_homecoming *.html
+recursive-include erpnext_poc_homecoming *.ico
+recursive-include erpnext_poc_homecoming *.js
+recursive-include erpnext_poc_homecoming *.json
+recursive-include erpnext_poc_homecoming *.md
+recursive-include erpnext_poc_homecoming *.png
+recursive-include erpnext_poc_homecoming *.py
+recursive-include erpnext_poc_homecoming *.svg
+recursive-include erpnext_poc_homecoming *.txt
+recursive-exclude erpnext_poc_homecoming *.pyc

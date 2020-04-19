@@ -1,7 +1,7 @@
 {
   "project": {
-    "name": "erpnext_template",
-    "description": "TODO_APP_DESCRIPTION",
+    "name": "erpnext_poc_homecoming",
+    "description": "POC of an ERPNext application to manage individual homecoming travel projects.",
     "version": "0.0.1"
   }
 }

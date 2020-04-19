@@ -8,10 +8,10 @@ Configuration for hooks.
 from __future__ import unicode_literals
 
 
-app_name = "erpnext_template"
+app_name = "erpnext_poc_homecoming"
 app_title = "ERPNext Template"
 app_publisher = "Monogramm"
-app_description = "TODO_APP_DESCRIPTION"
+app_description = "POC of an ERPNext application to manage individual homecoming travel projects."
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "opensource@monogramm.io"
@@ -21,12 +21,12 @@ app_license = "AGPL v3"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/erpnext_template/css/erpnext_template.css"
-# app_include_js = "/assets/erpnext_template/js/erpnext_template.js"
+# app_include_css = "/assets/erpnext_poc_homecoming/css/erpnext_poc_homecoming.css"
+# app_include_js = "/assets/erpnext_poc_homecoming/js/erpnext_poc_homecoming.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/erpnext_template/css/erpnext_template.css"
-# web_include_js = "/assets/erpnext_template/js/erpnext_template.js"
+# web_include_css = "/assets/erpnext_poc_homecoming/css/erpnext_poc_homecoming.css"
+# web_include_js = "/assets/erpnext_poc_homecoming/js/erpnext_poc_homecoming.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -49,7 +49,7 @@ app_license = "AGPL v3"
 # }
 
 # Website user home page (by function)
-# get_website_user_home_page = "erpnext_template.utils.get_home_page"
+# get_website_user_home_page = "erpnext_poc_homecoming.utils.get_home_page"
 
 # Generators
 # ----------
@@ -60,14 +60,14 @@ app_license = "AGPL v3"
 # Installation
 # ------------
 
-# before_install = "erpnext_template.install.before_install"
-# after_install = "erpnext_template.install.after_install"
+# before_install = "erpnext_poc_homecoming.install.before_install"
+# after_install = "erpnext_poc_homecoming.install.after_install"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "erpnext_template.notifications.get_notification_config"
+# notification_config = "erpnext_poc_homecoming.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -98,31 +98,31 @@ app_license = "AGPL v3"
 
 # scheduler_events = {
 # 	"all": [
-# 		"erpnext_template.tasks.all"
+# 		"erpnext_poc_homecoming.tasks.all"
 # 	],
 # 	"daily": [
-# 		"erpnext_template.tasks.daily"
+# 		"erpnext_poc_homecoming.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"erpnext_template.tasks.hourly"
+# 		"erpnext_poc_homecoming.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"erpnext_template.tasks.weekly"
+# 		"erpnext_poc_homecoming.tasks.weekly"
 # 	]
 # 	"monthly": [
-# 		"erpnext_template.tasks.monthly"
+# 		"erpnext_poc_homecoming.tasks.monthly"
 # 	]
 # }
 
 # Testing
 # -------
 
-# before_tests = "erpnext_template.install.before_tests"
+# before_tests = "erpnext_poc_homecoming.install.before_tests"
 
 # Overriding Whitelisted Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "erpnext_template.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "erpnext_poc_homecoming.event.get_events"
 # }
 

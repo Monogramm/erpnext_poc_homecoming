@@ -1,20 +1,20 @@
 [![License: AGPL v3][uri_license_image]][uri_license]
-[![Docs](https://img.shields.io/badge/Docs-Github%20Pages-blue)](https://monogramm.github.io/erpnext_template/)
+[![Docs](https://img.shields.io/badge/Docs-Github%20Pages-blue)](https://monogramm.github.io/erpnext_poc_homecoming/)
 [![gitmoji-changelog](https://img.shields.io/badge/Changelog-gitmoji-blue.svg)](https://github.com/frinyvonnick/gitmoji-changelog)
-[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/monogrammbot-monogrammerpnext_template/ "Managed with Taiga.io")
-[![Build Status](https://travis-ci.org/Monogramm/erpnext_template.svg)](https://travis-ci.org/Monogramm/erpnext_template)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/347f10fa884446c492b6ba8cd7f4d7fc)](https://app.codacy.com/gh/Monogramm/erpnext_template?utm_source=github.com&utm_medium=referral&utm_content=Monogramm/erpnext_template&utm_campaign=Badge_Grade_Dashboard)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/273679c703bb4f02ba1aacb350f7b1c5)](https://www.codacy.com/gh/Monogramm/erpnext_template?utm_source=github.com&utm_medium=referral&utm_content=Monogramm/erpnext_template&utm_campaign=Badge_Coverage)
-[![codecov](https://codecov.io/gh/Monogramm/erpnext_template/branch/master/graph/badge.svg)](https://codecov.io/gh/Monogramm/erpnext_template)
-[![Coverage Status](https://coveralls.io/repos/github/Monogramm/erpnext_template/badge.svg?branch=master)](https://coveralls.io/github/Monogramm/erpnext_template?branch=master)
+[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/monogrammbot-monogrammerpnext_poc_homecoming/ "Managed with Taiga.io")
+[![Build Status](https://travis-ci.org/Monogramm/erpnext_poc_homecoming.svg)](https://travis-ci.org/Monogramm/erpnext_poc_homecoming)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/347f10fa884446c492b6ba8cd7f4d7fc)](https://app.codacy.com/gh/Monogramm/erpnext_poc_homecoming?utm_source=github.com&utm_medium=referral&utm_content=Monogramm/erpnext_poc_homecoming&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/273679c703bb4f02ba1aacb350f7b1c5)](https://www.codacy.com/gh/Monogramm/erpnext_poc_homecoming?utm_source=github.com&utm_medium=referral&utm_content=Monogramm/erpnext_poc_homecoming&utm_campaign=Badge_Coverage)
+[![codecov](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming/branch/master/graph/badge.svg)](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming)
+[![Coverage Status](https://coveralls.io/repos/github/Monogramm/erpnext_poc_homecoming/badge.svg?branch=master)](https://coveralls.io/github/Monogramm/erpnext_poc_homecoming?branch=master)
 
 ## ERPNext Template
 
-> :alembic: TODO_APP_DESCRIPTION
+> :alembic: POC of an ERPNext application to manage individual homecoming travel projects.
 
 ## :blue_book: Docs
 
-See GitHub Pages at [monogramm.github.io/erpnext_template](https://monogramm.github.io/erpnext_template/).
+See GitHub Pages at [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming/).
 
 ## :chart_with_upwards_trend: Changes
 
@@ -24,15 +24,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## :bookmark: Roadmap
 
-See [Taiga.io](https://tree.taiga.io/project/monogrammbot-monogrammerpnext_template/ "Taiga.io monogrammbot-monogrammerpnext_template")
+See [Taiga.io](https://tree.taiga.io/project/monogrammbot-monogrammerpnext_poc_homecoming/ "Taiga.io monogrammbot-monogrammerpnext_poc_homecoming")
 
 ## :construction: Install
 
 **Install Frappe application**
 
 ```sh
-bench get-app https://github.com/Monogramm/erpnext_template
-bench install-app erpnext_template
+bench get-app https://github.com/Monogramm/erpnext_poc_homecoming
+bench install-app erpnext_poc_homecoming
 ```
 
 Check [Frappe Install](https://github.com/frappe/frappe/wiki/The-Hitchhiker%27s-Guide-to-Installing-Frappe-on-Linux) for more details.
@@ -40,7 +40,7 @@ Check [Frappe Install](https://github.com/frappe/frappe/wiki/The-Hitchhiker%27s-
 ## :white_check_mark: Run tests
 
 ```sh
-bench run-tests --app erpnext_template
+bench run-tests --app erpnext_poc_homecoming
 ```
 
 Check [Frappe Unit Testing](https://frappe.io/docs/user/en/guides/automated-testing/unit-testing) for more details.
@@ -56,7 +56,7 @@ TODO_APP_USAGE
 <!--
 [TODO] If project is deployed to DockerHub:
 ## :whale: Supported tags
-[Dockerhub monogramm/erpnext_template](https://hub.docker.com/r/monogramm/erpnext_template/)
+[Dockerhub monogramm/erpnext_poc_homecoming](https://hub.docker.com/r/monogramm/erpnext_poc_homecoming/)
 * `latest`
 -->
 
@@ -74,7 +74,7 @@ TODO_APP_USAGE
 
 ## :handshake: Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Monogramm/erpnext_template/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Monogramm/erpnext_poc_homecoming/issues).
 [Check the contributing guide](./CONTRIBUTING.md).<br />
 
 ## :thumbsup: Show your support

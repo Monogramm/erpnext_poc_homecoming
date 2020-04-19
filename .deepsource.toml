@@ -5,7 +5,7 @@ test_patterns = [
 ]
 
 exclude_patterns = [
-  "erpnext_template/patches/**",
+  "erpnext_poc_homecoming/patches/**",
   "*.min.js"
 ]
 

@@ -1,14 +1,14 @@
-# **erpnext_template** Documentation
+# **erpnext_poc_homecoming** Documentation
 
 This is the Documentation for **ERPNext Template**.
 
 ## Docs
 
-See GitHub Pages at [monogramm.github.io/erpnext_template](https://monogramm.github.io/erpnext_template/).
+See GitHub Pages at [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming/).
 
 ## Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Monogramm/erpnext_template/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Monogramm/erpnext_poc_homecoming/issues).
 [Check the contributing guide](./CONTRIBUTING.md).<br />
 
 ## License

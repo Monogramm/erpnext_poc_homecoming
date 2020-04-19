@@ -9,7 +9,7 @@ locale
 *.egg-info
 dist/
 build/
-erpnext_template/docs/current
+erpnext_poc_homecoming/docs/current
 .vscode
 .idea/
 *.iml

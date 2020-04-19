@@ -50,11 +50,11 @@ console() {
 }
 
 ## TODO Add function to initialize from template
-#   - Replace all occurences of `erpnext_template` and `ERPNext Template` in all files
-#   - Rename all directories `erpnext_template`
+#   - Replace all occurences of `erpnext_poc_homecoming` and `ERPNext Template` in all files
+#   - Rename all directories `erpnext_poc_homecoming`
 
 ## TODO Add function to make release X.Y.Z
-#   - Update version in ./erpnext_template/__init__.py
+#   - Update version in ./erpnext_poc_homecoming/__init__.py
 #   - Update version in ./.gitmoji-changelogrc
 #   - Generate Changelog for version `gitmoji-changelog --preset generic`
 #   - Add and commit to git modifications with message `:bookmark: Release X.Y.Z`
