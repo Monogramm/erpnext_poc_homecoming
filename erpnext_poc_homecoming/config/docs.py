@@ -15,7 +15,7 @@ sub_heading = "TODO_APP_USAGE"
 
 
 def get_context(context):
-    context.brand_html = "ERPNext Template"
+    context.brand_html = "ERPNext POC Homecoming"
     context.source_link = source_link
     context.docs_base_url = docs_base_url
     context.headline = headline

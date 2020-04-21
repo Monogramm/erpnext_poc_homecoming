@@ -1,6 +1,6 @@
 # **erpnext_poc_homecoming** Documentation site
 
-This directory contains the code for the **ERPNext Template** docs site, [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming).
+This directory contains the code for the **ERPNext POC Homecoming** docs site, [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming).
 
 References:
 

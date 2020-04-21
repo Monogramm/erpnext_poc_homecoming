@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming/branch/master/graph/badge.svg)](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming)
 [![Coverage Status](https://coveralls.io/repos/github/Monogramm/erpnext_poc_homecoming/badge.svg?branch=master)](https://coveralls.io/github/Monogramm/erpnext_poc_homecoming?branch=master)
 
-## ERPNext Template
+## ERPNext POC Homecoming
 
 > :alembic: POC of an ERPNext application to manage individual homecoming travel projects.
 

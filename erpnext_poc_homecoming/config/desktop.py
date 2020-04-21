@@ -13,10 +13,10 @@ from frappe import _
 def get_data():
     return [
         {
-            "module_name": "ERPNext Template",
+            "module_name": "ERPNext POC Homecoming",
             "color": "grey",
             "icon": "octicon octicon-file-directory",
             "type": "module",
-            "label": _("ERPNext Template")
+            "label": _("ERPNext POC Homecoming")
         }
     ]
