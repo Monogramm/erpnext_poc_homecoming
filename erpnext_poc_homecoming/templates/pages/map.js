@@ -14,7 +14,6 @@ frappe.call({
         console.log(places);
         for (let i = 0; i < places.length; i++){
             let place = JSON.parse(places[i].location);
-            console.log(place);
             L.marker(place.features[0].geometry.coordinates.reverse()).addTo(map);
         }
     }
