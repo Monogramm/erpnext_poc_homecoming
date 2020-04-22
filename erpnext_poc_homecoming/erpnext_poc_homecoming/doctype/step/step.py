@@ -7,4 +7,4 @@ import frappe
 from frappe.model.document import Document
 
 class HomecomingStep(Document):
-	pass
+    pass
