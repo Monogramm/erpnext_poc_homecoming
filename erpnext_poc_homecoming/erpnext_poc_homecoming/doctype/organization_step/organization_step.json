@@ -4,6 +4,7 @@
  "allow_guest_to_view": 0,
  "allow_import": 0,
  "allow_rename": 0,
+ "autoname": "field:step",
  "beta": 0,
  "creation": "2020-04-22 14:45:00.158365",
  "custom": 0,
@@ -45,7 +46,7 @@
    "search_index": 0,
    "set_only_once": 0,
    "translatable": 0,
-   "unique": 0
+   "unique": 1
   },
   {
    "allow_bulk_edit": 0,
@@ -92,7 +93,7 @@
  "issingle": 0,
  "istable": 1,
  "max_attachments": 0,
- "modified": "2020-04-22 14:51:51.196020",
+ "modified": "2020-04-22 19:07:36.493050",
  "modified_by": "Administrator",
  "module": "ERPNext POC Homecoming",
  "name": "Organization Step",
