@@ -1,1 +1,56 @@
-apps/erpnext_poc_homecoming/config/desktop.py,ERPNext POC Homecoming,ERPNext POC Homecoming
+apps/erpnext_poc_homecoming/config/desktop.py,ERPNext POC Homecoming,Guide du retour au pays
+Doctype: Step,Step,Etape
+Doctype: Step,Title,Titre
+Doctype: Step,Description,Description
+Doctype: Meeting,Meeting,Rendez-vous
+Doctype: Meeting,Title,Titre
+Doctype: Meeting,Date & time,Date et heure
+Doctype: Meeting,User,Utilisateur
+Doctype: Meeting,Adviser,Conseiller
+Doctype: Meeting,Amended From,Modifie depuis
+Doctype: Adviser Schedule,Adviser Schedule,Planning conseiller
+Doctype: Adviser Schedule,Schedule Name,Nom du planning
+Doctype: Adviser Schedule,Adviser,Conseiller
+Doctype: Adviser Schedule,Adviser,Conseiller
+Doctype: Adviser Schedule,Time Slots,Creneaux
+Doctype: Adviser Schedule,Disabled,Desactive
+Doctype: Adviser Schedule Time Slot,Adviser Schedule Time Slot,Creneau planning conseiller
+Doctype: Adviser Schedule Time Slot,Day,Jour
+Doctype: Adviser Schedule Time Slot,Sunday,Dimanche
+Doctype: Adviser Schedule Time Slot,Monday,Lundi
+Doctype: Adviser Schedule Time Slot,Tuesday,Mardi
+Doctype: Adviser Schedule Time Slot,Wednesday,Mercredi
+Doctype: Adviser Schedule Time Slot,Thursday,Jeudi
+Doctype: Adviser Schedule Time Slot,Friday,Vendredi
+Doctype: Adviser Schedule Time Slot,Saturday,Samedi
+Doctype: Adviser Schedule Time Slot,From Time,De
+Doctype: Adviser Schedule Time Slot,To Time,A
+Doctype: Organization,Organization,Organisme
+Doctype: Organization,Title,Titre
+Doctype: Organization,Route,Chemin
+Doctype: Organization,Is published,Est publie
+Doctype: Organization,Image,Image
+Doctype: Organization,Address,Adresse
+Doctype: Organization,Location,Localisation
+Doctype: Organization,Description,Description
+Doctype: Organization,Steps,Etapes
+Doctype: Organization Step,Organization Step,Etape de l'Organisme
+Doctype: Organization Step,Step,Etape
+Doctype: Organization Step,Resources,Ressources
+Doctype: Organization Step Resource,Organization Step Resource,Resource de l'etape l'Organisme
+Doctype: Organization Step Resource,Title,Titre
+Doctype: Organization Step Resource,Document,Document
+Doctype: Organization Step Resource,Link,Lien
+Doctype: Organization Step Resource,Description,Description
+Doctype: Homecoming,Homecoming,Retour au pays
+Doctype: Homecoming,Series,Numerotation
+Doctype: Homecoming,Title,Titre
+Doctype: Homecoming,User,Utilisateur
+Doctype: Homecoming,Contact,Contact
+Doctype: Homecoming,Amended From,Modifie depuis
+Doctype: Homecoming,% Completed,% d'avancement
+Doctype: Homecoming,Steps,Etapes
+Doctype: Homecoming Step,Homecoming Step,Etape du retour au pays
+Doctype: Homecoming Step,Status,Statut
+Doctype: Homecoming Step,Step,Etape
+Doctype: Homecoming Step,Documents,Documents
