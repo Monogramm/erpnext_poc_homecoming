@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2020, Monogramm and Contributors
 # See license.txt
-"""Configuration for hooks."""
+"""
+Configuration for hooks.
+"""
 
 from __future__ import unicode_literals
 
@@ -10,8 +12,8 @@ app_name = "erpnext_poc_homecoming"
 app_title = "ERPNext POC Homecoming"
 app_publisher = "Monogramm"
 app_description = "POC of an ERPNext application to manage individual homecoming travel projects."
-app_icon = "octicon octicon-globe"
-app_color = "forestgreen"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
 app_email = "opensource@monogramm.io"
 app_license = "AGPL v3"
 
@@ -53,7 +55,7 @@ app_license = "AGPL v3"
 # ----------
 
 # automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
+website_generators = ["Web Page", "Organization"]
 
 # Installation
 # ------------
