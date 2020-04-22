@@ -12,8 +12,8 @@ def get_data():
     return [
         {
             "module_name": "ERPNext POC Homecoming",
-            "color": "grey",
-            "icon": "octicon octicon-file-directory",
+            "color": "forestgreen",
+            "icon": "octicon octicon-globe",
             "type": "module",
             "label": _("ERPNext POC Homecoming")
         }

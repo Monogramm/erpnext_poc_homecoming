@@ -51,14 +51,12 @@ When installing Frappe app, the following python requirements will be installed:
 
 How to use this application:
 
-TODO_APP_USAGE
+Use this application to create your own 'homecoming' project and get in contact with organizations.
 
-<!--
-[TODO] If project is deployed to DockerHub:
-## :whale: Supported tags
+## :whale: Supported docker tags
+
 [Dockerhub monogramm/erpnext_poc_homecoming](https://hub.docker.com/r/monogramm/erpnext_poc_homecoming/)
 * `latest`
--->
 
 ## :bust_in_silhouette: Authors
 

@@ -9,7 +9,7 @@ from __future__ import unicode_literals
 source_link = "https://github.com/Monogramm/erpnext_poc_homecoming"
 docs_base_url = "https://monogramm.github.io/erpnext_poc_homecoming"
 headline = "POC of an ERPNext application to manage individual homecoming travel projects."
-sub_heading = "TODO_APP_USAGE"
+sub_heading = "Use this application to create your own 'homecoming' project and get in contact with organizations."
 
 
 def get_context(context):
