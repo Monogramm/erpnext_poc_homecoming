@@ -1,6 +1,10 @@
-# **erpnext_poc_homecoming** Documentation
+# **ERPNext POC Homecoming** Documentation
 
-This is the Documentation for **ERPNext Template**.
+This is the Documentation for **ERPNext POC Homecoming**.
+
+## Source Code
+
+See source code on GitHub at [github.com/Monogramm/erpnext_poc_homecoming](https://github.com/Monogramm/erpnext_poc_homecoming/).
 
 ## Docs
 

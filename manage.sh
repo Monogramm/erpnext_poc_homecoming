@@ -17,6 +17,8 @@ dc() {
 build() {
     log 'Building container(s)...'
     dc "${1}" build ${@:2}
+    # (dirty) trick to allow edition of files generated from docker group
+    chmod -R g+w .
 }
 
 start() {
@@ -50,12 +52,16 @@ down() {
     rm -rf "${ERPNEXT_HOME:-/srv/erpnext_poc_homecoming/frappe}"/*
 }
 
+dc_bench() {
+    dc "${1}" exec erpnext_app bench ${@:2}
+}
+
 console() {
-    dc -it "${1}" exec erpnext_app bench console ${@:2}
+    dc_bench "${1}" console ${@:2}
 }
 
 ## TODO Add function to initialize from template
-#   - Replace all occurences of `erpnext_poc_homecoming` and `ERPNext Template` in all files
+#   - Replace all occurences of `erpnext_poc_homecoming` and `ERPNext POC Homecoming` in all files
 #   - Rename all directories `erpnext_poc_homecoming`
 
 ## TODO Add function to make release X.Y.Z
@@ -76,7 +82,8 @@ usage() {
         ps          List Dev env containers
         logs        Follow logs of Dev env
         down        Stop and remove Dev env
-        console     Send command to Dev env bench console
+        bench       Send command to Dev env bench
+        console     Open Dev env bench console
     "
 }
 
@@ -94,6 +101,7 @@ case "${1}" in
     ps) ps docker-compose.yml ${@:2};;
     logs) logs docker-compose.yml ${@:2};;
     down) down docker-compose.yml ${@:2};;
+    bench) dc_bench docker-compose.yml ${@:2};;
     console) console docker-compose.yml ${@:2};;
     # PROD env
     #build) TAG=${DOCKER_TAG} \

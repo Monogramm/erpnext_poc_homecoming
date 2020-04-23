@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming/branch/master/graph/badge.svg)](https://codecov.io/gh/Monogramm/erpnext_poc_homecoming)
 [![Coverage Status](https://coveralls.io/repos/github/Monogramm/erpnext_poc_homecoming/badge.svg?branch=master)](https://coveralls.io/github/Monogramm/erpnext_poc_homecoming?branch=master)
 
-## ERPNext Template
+## ERPNext POC Homecoming
 
 > :alembic: POC of an ERPNext application to manage individual homecoming travel projects.
 
@@ -51,14 +51,13 @@ When installing Frappe app, the following python requirements will be installed:
 
 How to use this application:
 
-TODO_APP_USAGE
+Use this application to create your own 'homecoming' project and get in contact with organizations.
 
-<!--
-[TODO] If project is deployed to DockerHub:
-## :whale: Supported tags
-[Dockerhub monogramm/erpnext_poc_homecoming](https://hub.docker.com/r/monogramm/erpnext_poc_homecoming/)
+## :whale: Supported docker tags
+
+[Dockerhub monogramm/docker-erpnext-poc-homecoming](https://hub.docker.com/r/monogramm/docker-erpnext-poc-homecoming/)
 * `latest`
--->
+* `develop`
 
 ## :bust_in_silhouette: Authors
 

@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2020, Monogramm and Contributors
 # See license.txt
-"""
-Configuration for hooks.
-"""
+"""Configuration for hooks."""
 
 from __future__ import unicode_literals
 
 
 app_name = "erpnext_poc_homecoming"
-app_title = "ERPNext Template"
+app_title = "ERPNext POC Homecoming"
 app_publisher = "Monogramm"
 app_description = "POC of an ERPNext application to manage individual homecoming travel projects."
-app_icon = "octicon octicon-file-directory"
-app_color = "grey"
+app_icon = "octicon octicon-globe"
+app_color = "forestgreen"
 app_email = "opensource@monogramm.io"
 app_license = "AGPL v3"
 
@@ -45,7 +43,7 @@ app_license = "AGPL v3"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+#    "Role": "home_page"
 # }
 
 # Website user home page (by function)
@@ -74,11 +72,11 @@ app_license = "AGPL v3"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+#     "Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
+#     "Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # Document Events
@@ -86,32 +84,32 @@ app_license = "AGPL v3"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
+#     "*": {
+#         "on_update": "method",
+#         "on_cancel": "method",
+#         "on_trash": "method"
+#    }
 # }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-# 	"all": [
-# 		"erpnext_poc_homecoming.tasks.all"
-# 	],
-# 	"daily": [
-# 		"erpnext_poc_homecoming.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"erpnext_poc_homecoming.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"erpnext_poc_homecoming.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"erpnext_poc_homecoming.tasks.monthly"
-# 	]
+#     "all": [
+#         "erpnext_poc_homecoming.tasks.all"
+#     ],
+#     "daily": [
+#         "erpnext_poc_homecoming.tasks.daily"
+#     ],
+#     "hourly": [
+#         "erpnext_poc_homecoming.tasks.hourly"
+#     ],
+#     "weekly": [
+#         "erpnext_poc_homecoming.tasks.weekly"
+#     ]
+#     "monthly": [
+#         "erpnext_poc_homecoming.tasks.monthly"
+#     ]
 # }
 
 # Testing
@@ -123,6 +121,6 @@ app_license = "AGPL v3"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "erpnext_poc_homecoming.event.get_events"
+#     "frappe.desk.doctype.event.event.get_events": "erpnext_poc_homecoming.event.get_events"
 # }
 
