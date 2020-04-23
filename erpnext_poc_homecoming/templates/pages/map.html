@@ -1,0 +1,21 @@
+{% extends "templates/web.html" %}
+{% block head_html %}
+{% endblock %}
+{% block title %}{{ heading or "Map" }}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+{% endblock %}
+<div class="map-content">
+    {% block page_content %}
+        <div id="map"></div>
+    {% endblock %}
+</div>
+{% block map %}
+{% endblock %}
+

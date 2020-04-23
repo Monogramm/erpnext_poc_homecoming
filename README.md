@@ -55,8 +55,9 @@ Use this application to create your own 'homecoming' project and get in contact 
 
 ## :whale: Supported docker tags
 
-[Dockerhub monogramm/erpnext_poc_homecoming](https://hub.docker.com/r/monogramm/erpnext_poc_homecoming/)
+[Dockerhub monogramm/docker-erpnext-poc-homecoming](https://hub.docker.com/r/monogramm/docker-erpnext-poc-homecoming/)
 * `latest`
+* `develop`
 
 ## :bust_in_silhouette: Authors
 
