@@ -1,7 +1,82 @@
 {% extends "templates/web.html" %}
 
+
 {% block page_content %}
-<h1>{{ title }}</h1>
+    <div class="container" style="font-size: 18px;">
+        <div class="title" style="font-size: 40px; text-align: center">
+            {{ title }}
+        </div>
+        <div class="subtitle" style=" font-size: 32px;">About Organization
+        </div>
+        <div class="about-organization">
+            <p> {{ doc.get('description') }}</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            {% if doc.get('address') %}
+                <div class="address col-4">
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            Company Address Title: </b><i>{{ doc.get("address") }}</i></p>
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            Address Line 1: </b><i id="address_line_1">{{ doc.get("address-1") }}</i></p>
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            Address Line 2: </b><i id="address_line_2">{{ doc.get("address-1") }}</i></p>
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            Postal code: </b><i id="postal_code">{{ doc.get("address-1") }}</i></p>
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            City: </b><i id="city">{{ doc.get("address-1") }}</i></p>
+                    <p class="list-group-item-text">
+                        <b class="address">
+                            Country: </b><i id="country">{{ doc.get("address-1") }}</i></p>
+                </div>
+            {% endif %}
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <ul id="socials" style="margin-top: 25px; text-align: right">
+                <p><a id="mail" href="#" class="bold"><i class="fa fa-pencil"></i> Mail: </a></p>
+                <p><a id="phone" href="#" class="bold"><i class="fa fa-phone"></i> Phone: </a></p>
+            </ul>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            let current_url = window.location.href.split('/');
+            let let_url = current_url[0] + "//" + current_url[1] + current_url[2] +
+                "/api/method/erpnext_poc_homecoming.erpnext_poc_homecoming.doctype.organization.organization.get_address?address_title={{ doc.get("address") }}";
+            $.ajax({
+                datatype: "json",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('X-Frappe-CSRF-Token', frappe.csrf_token);
+                },
+                url: let_url,
+                success: function (r) {
+                    console.log(r);
+                    let mail = document.getElementById("mail");
+                    let tel = document.getElementById("phone");
+                    let address_line_1 = document.getElementById("address_line_1");
+                    let address_line_2 = document.getElementById("address_line_2");
+                    let postal_code = document.getElementById("postal_code");
+                    let city = document.getElementById("city");
+                    let country = document.getElementById("country");
+
+                    address_line_1.innerText = r.message.address_line1;
+                    address_line_2.innerText = r.message.address_line2;
+                    postal_code.innerText = r.message.pincode;
+                    city.innerText = r.message.city;
+                    country.innerText = r.message.country;
+                    mail.innerHTML ="<i class=\"fa fa-pencil\"></i> Mail: "+ r.message.email_id;
+                    tel.innerHTML = "<i class=\"fa fa-phone\"></i> Phone: " + r.message.phone;
+                    mail.href = "mailto:" + r.message.email_id;
+                    tel.href = "tel:" + r.message.phone;
+
+                },
+            });
+        }
+    </script>
 {% endblock %}
 
 <!-- this is a sample default web page template -->
