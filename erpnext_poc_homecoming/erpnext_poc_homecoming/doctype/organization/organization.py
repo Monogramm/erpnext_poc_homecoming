@@ -30,7 +30,7 @@ def get_list_context(context=None):
         "show_search": True,
         'no_breadcrumbs': True,
         "doctype": "Organization",
-        "doc_title": _("Organization"),
+        "title": _("Organization"),
         "row_template": "erpnext_poc_homecoming/doctype/organization/templates/organization_row.html",
     })
 
