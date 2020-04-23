@@ -6,6 +6,7 @@
         <div class="title" style="font-size: 40px; text-align: center">
             {{ title }}
         </div>
+        <img src="{{ doc.get('image')}}" style="margin-top: 20px; margin-bottom: 20px;">
         <div class="subtitle" style=" font-size: 32px;">About Organization
         </div>
         <div class="about-organization">
@@ -68,7 +69,7 @@
                     postal_code.innerText = r.message.pincode;
                     city.innerText = r.message.city;
                     country.innerText = r.message.country;
-                    mail.innerHTML ="<i class=\"fa fa-pencil\"></i> Mail: "+ r.message.email_id;
+                    mail.innerHTML = "<i class=\"fa fa-pencil\"></i> Mail: " + r.message.email_id;
                     tel.innerHTML = "<i class=\"fa fa-phone\"></i> Phone: " + r.message.phone;
                     mail.href = "mailto:" + r.message.email_id;
                     tel.href = "tel:" + r.message.phone;
