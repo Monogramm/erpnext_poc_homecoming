@@ -14,7 +14,7 @@
 
 ## :blue_book: Docs
 
-See GitHub Pages at [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming/).
+See GitHub Pages at [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming/) for usage and architecture.
 
 ## :chart_with_upwards_trend: Changes
 
@@ -46,12 +46,6 @@ bench run-tests --app erpnext_poc_homecoming
 Check [Frappe Unit Testing](https://frappe.io/docs/user/en/guides/automated-testing/unit-testing) for more details.
 
 When installing Frappe app, the following python requirements will be installed:
-
-## :rocket: Usage
-
-How to use this application:
-
-Use this application to create your own 'homecoming' project and get in contact with organizations.
 
 ## :whale: Supported docker tags
 

@@ -1,21 +1,21 @@
 {% extends "templates/web.html" %}
-{% block head_html %}
-{% endblock %}
-{% block title %}{{ heading or "Map" }}{% endblock %}
+
+{% block title %}{{ heading or _("Map") }}{% endblock %}
+
 {% block style %}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
     <style>
         #map {
-            height: 500px;
+            min-height: 500px;
         }
     </style>
 {% endblock %}
+
+{% block page_content %}
+<h1>{{ _('Organization') }}</h1>
 <div class="map-content">
-    {% block page_content %}
-        <div id="map"></div>
-    {% endblock %}
+    <div id="map"></div>
 </div>
-{% block map %}
 {% endblock %}
 
