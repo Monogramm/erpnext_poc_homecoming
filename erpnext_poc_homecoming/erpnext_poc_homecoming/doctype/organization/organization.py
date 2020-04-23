@@ -16,7 +16,12 @@ def get_list_context(context=None):
                 "show_sidebar": True,
                 "show_search": True,
                 'no_breadcrumbs': True,
-                "title": _("Organization"),
+                #"title": _("Organization"),
                 #"get_list": get_organization_list,
                 "row_template": "erpnext_poc_homecoming/doctype/organization/templates/organization_row.html",
         })
+
+
+@frappe.whitelist(allow_guest=True)
+def get_list_map():
+    return frappe.get_all("Organization", fields=["title", "route", "location"])

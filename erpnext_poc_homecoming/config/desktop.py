@@ -13,7 +13,7 @@ def get_data():
         {
             "module_name": "ERPNext POC Homecoming",
             "color": "forestgreen",
-            "icon": "octicon octicon-globe",
+            "icon": "octicon octicon-home",
             "type": "module",
             "label": _("ERPNext POC Homecoming")
         }
