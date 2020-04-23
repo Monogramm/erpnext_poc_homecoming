@@ -53,7 +53,7 @@ app_license = "AGPL v3"
 # ----------
 
 # automatically create page for each record of this doctype
-website_generators = ["Web Page", "Organization"]
+# website_generators = ["Web Page"]
 
 # Installation
 # ------------
