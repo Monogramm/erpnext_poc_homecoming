@@ -19,7 +19,7 @@ class Organization(WebsiteGenerator):
     #     return context
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def get_address(address_title):
     return frappe.get_doc("Address", address_title)
 
