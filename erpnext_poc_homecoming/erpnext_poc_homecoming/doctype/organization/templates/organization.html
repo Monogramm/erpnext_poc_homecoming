@@ -3,46 +3,58 @@
 
 {% block page_content %}
     <div class="container" style="font-size: 18px;">
-        <div class="title" style="font-size: 40px; text-align: center">
-            {{ title }}
-        </div>
-        <img src="{{ doc.get('image')}}" style="margin-top: 20px; margin-bottom: 20px;">
-        <div class="subtitle" style=" font-size: 32px;">About Organization
-        </div>
+        <h1 class="title" style="font-size: 40px; text-align: center">{{ title }}</h1>
         <div class="about-organization">
-            <p> {{ doc.get('description') }}</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            {% if doc.get('address') %}
-                <div class="address col-4">
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            Company Address Title: </b><i>{{ doc.get("address") }}</i></p>
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            Address Line 1: </b><i id="address_line_1">{{ doc.get("address-1") }}</i></p>
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            Address Line 2: </b><i id="address_line_2">{{ doc.get("address-1") }}</i></p>
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            Postal code: </b><i id="postal_code">{{ doc.get("address-1") }}</i></p>
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            City: </b><i id="city">{{ doc.get("address-1") }}</i></p>
-                    <p class="list-group-item-text">
-                        <b class="address">
-                            Country: </b><i id="country">{{ doc.get("address-1") }}</i></p>
+            {% if doc.get('description') %}
+            <h2 style=" font-size: 32px;">{{ _('Description') }}</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>{{ doc.description }}</p>
                 </div>
+                <div class="col-md-4">
+                    {% if doc.get('image') %}
+                    <img data-src="holder.js/200x200" class="img-thumbnail"
+                        alt="200x200" style="width: 200px; height: 200px;"
+                        src="{{ doc.image }}" data-holder-rendered="true">
+                    {% endif %}
+                </div>
+            </div>
             {% endif %}
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <ul id="socials" style="margin-top: 25px; text-align: right">
-                <p><a id="mail" href="#" class="bold"><i class="fa fa-pencil"></i> Mail: </a></p>
-                <p><a id="phone" href="#" class="bold"><i class="fa fa-phone"></i> Phone: </a></p>
-            </ul>
+
+            {% if doc.get('address') %}
+            <h2 style=" font-size: 32px;">{{ _('Address') }}</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="list-group-item-text">
+                        <strong class="address">
+                            {{ _('Address') }}: </strong><i id="org_address">...</i></p>
+                    <p class="list-group-item-text">
+                        <strong class="address">
+                            {{ _('Postal Code') }}: </strong><i id="org_postal_code">...</i></p>
+                    <p class="list-group-item-text">
+                        <strong class="address">
+                            {{ _('City/Town') }}: </strong><i id="org_city">...</i></p>
+                    <p class="list-group-item-text">
+                        <strong class="address">
+                            {{ _('Country') }}: </strong><i id="org_country">...</i></p>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            {% endif %}
+
+            {% if doc.get('address') %}
+            <h2 style=" font-size: 32px;">{{ _('Contact') }}</h2>
+            <div class="col-4">
+                <p><strong><i class="fa fa-pencil"></i>&nbsp;{{ _('Email Address') }}: </strong><a id="org_mail" href="#org_mail">...</a></p>
+                <p><strong><i class="fa fa-phone"></i>&nbsp;{{ _('Phone') }}: </strong><a id="org_phone" href="#org_phone">...</a></p>
+            </div>
+            {% endif %}
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
     <script>
         window.onload = function () {
             let current_url = window.location.href.split('/');
@@ -56,28 +68,57 @@
                 url: let_url,
                 success: function (r) {
                     console.log(r);
-                    let mail = document.getElementById("mail");
-                    let tel = document.getElementById("phone");
-                    let address_line_1 = document.getElementById("address_line_1");
-                    let address_line_2 = document.getElementById("address_line_2");
-                    let postal_code = document.getElementById("postal_code");
-                    let city = document.getElementById("city");
-                    let country = document.getElementById("country");
+                    let mail = document.getElementById("org_mail");
+                    let tel = document.getElementById("org_phone");
+                    let address = document.getElementById("org_address");
+                    let postal_code = document.getElementById("org_postal_code");
+                    let city = document.getElementById("org_city");
+                    let country = document.getElementById("org_country");
 
-                    address_line_1.innerText = r.message.address_line1;
-                    address_line_2.innerText = r.message.address_line2;
-                    postal_code.innerText = r.message.pincode;
-                    city.innerText = r.message.city;
-                    country.innerText = r.message.country;
-                    mail.innerHTML = "<i class=\"fa fa-pencil\"></i> Mail: " + r.message.email_id;
-                    tel.innerHTML = "<i class=\"fa fa-phone\"></i> Phone: " + r.message.phone;
-                    mail.href = "mailto:" + r.message.email_id;
-                    tel.href = "tel:" + r.message.phone;
+                    if (r.message.address_line1) {
+                        address.innerText = r.message.address_line1;
+
+                        if (r.message.address_line2) {
+                            address.innerText += ' ' + r.message.address_line2;
+                        }
+                    } else {
+                        address.style = "display: none;"
+                    }
+
+                    if (r.message.pincode) {
+                        postal_code.innerText = r.message.pincode;
+                    } else {
+                        postal_code.style = "display: none;"
+                    }
+
+                    if (r.message.city) {
+                        city.innerText = r.message.city;
+                    } else {
+                        city.style = "display: none;"
+                    }
+
+                    if (r.message.country) {
+                        country.innerText = r.message.country;
+                    } else {
+                        country.style = "display: none;"
+                    }
+
+                    if (r.message.phone) {
+                        tel.innerHTML  = r.message.phone;
+                        tel.href = "tel:" + r.message.phone;
+                    } else {
+                        tel.style = "display: none;"
+                    }
+
+                    if (r.message.email_id) {
+                        mail.innerHTML = r.message.email_id;
+                        mail.href = "mailto:" + r.message.email_id;
+                    } else {
+                        mail.style = "display: none;"
+                    }
 
                 },
             });
         }
     </script>
 {% endblock %}
-
-<!-- this is a sample default web page template -->
