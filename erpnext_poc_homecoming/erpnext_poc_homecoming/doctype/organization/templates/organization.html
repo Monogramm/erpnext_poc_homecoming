@@ -1,5 +1,6 @@
 {% extends "templates/web.html" %}
 
+{% set address = frappe.get_doc("Address", doc.address) if doc.get('address') else None %}
 
 {% block page_content %}
     <div class="container" style="font-size: 18px;">
@@ -21,104 +22,50 @@
             </div>
             {% endif %}
 
-            {% if doc.get('address') %}
+            {% if address %}
             <h2 style=" font-size: 32px;">{{ _('Address') }}</h2>
             <div class="row">
                 <div class="col-md-4">
+                    {% if address.get('address_line1') %}
+                    {% set address_line = address.address_line1 + (address.address_line2 if address.get('address_line2') else '') %}
                     <p class="list-group-item-text">
                         <strong class="address">
-                            {{ _('Address') }}: </strong><i id="org_address">...</i></p>
+                            {{ _('Address') }}: </strong><i id="org_address">{{ address_line }}</i></p>
+                    {% endif %}
+                    {% if address.get('pincode') %}
                     <p class="list-group-item-text">
                         <strong class="address">
-                            {{ _('Postal Code') }}: </strong><i id="org_postal_code">...</i></p>
+                            {{ _('Postal Code') }}: </strong><i id="org_postal_code">{{ address.pincode }}</i></p>
+                    {% endif %}
+                    {% if address.get('city') %}
                     <p class="list-group-item-text">
                         <strong class="address">
-                            {{ _('City/Town') }}: </strong><i id="org_city">...</i></p>
+                            {{ _('City/Town') }}: </strong><i id="org_city">{{ address.city }}</i></p>
+                    {% endif %}
+                    {% if address.get('country') %}
                     <p class="list-group-item-text">
                         <strong class="address">
-                            {{ _('Country') }}: </strong><i id="org_country">...</i></p>
+                            {{ _('Country') }}: </strong><i id="org_country">{{ address.country }}</i></p>
+                    {% endif %}
                 </div>
                 <div class="col-md-4">
                 </div>
             </div>
             {% endif %}
 
-            {% if doc.get('address') %}
+            {% if address %}
             <h2 style=" font-size: 32px;">{{ _('Contact') }}</h2>
             <div class="col-4">
-                <p><strong><i class="fa fa-pencil"></i>&nbsp;{{ _('Email Address') }}: </strong><a id="org_mail" href="#org_mail">...</a></p>
-                <p><strong><i class="fa fa-phone"></i>&nbsp;{{ _('Phone') }}: </strong><a id="org_phone" href="#org_phone">...</a></p>
+                {% if address.get('email_id') %}
+                <p><strong><i class="fa fa-pencil"></i>&nbsp;{{ _('Email Address') }}: </strong><a 
+                    id="org_mail" href="#org_mail">{{ address.email_id }}</a></p>
+                {% endif %}
+                {% if address.get('phone') %}
+                <p><strong><i class="fa fa-phone"></i>&nbsp;{{ _('Phone') }}: </strong><a 
+                    id="org_phone" href="#org_phone">{{ address.phone }}</a></p>
+                {% endif %}
             </div>
             {% endif %}
         </div>
     </div>
-{% endblock %}
-
-{% block script %}
-    <script>
-        window.onload = function () {
-            let current_url = window.location.href.split('/');
-            let let_url = current_url[0] + "//" + current_url[1] + current_url[2] +
-                "/api/method/erpnext_poc_homecoming.erpnext_poc_homecoming.doctype.organization.organization.get_address?address_title={{ doc.get("address") }}";
-            $.ajax({
-                datatype: "json",
-                beforeSend: function (xhr) {
-                    xhr.setRequestHeader('X-Frappe-CSRF-Token', frappe.csrf_token);
-                },
-                url: let_url,
-                success: function (r) {
-                    console.log(r);
-                    let mail = document.getElementById("org_mail");
-                    let tel = document.getElementById("org_phone");
-                    let address = document.getElementById("org_address");
-                    let postal_code = document.getElementById("org_postal_code");
-                    let city = document.getElementById("org_city");
-                    let country = document.getElementById("org_country");
-
-                    if (r.message.address_line1) {
-                        address.innerText = r.message.address_line1;
-
-                        if (r.message.address_line2) {
-                            address.innerText += ' ' + r.message.address_line2;
-                        }
-                    } else {
-                        address.style = "display: none;"
-                    }
-
-                    if (r.message.pincode) {
-                        postal_code.innerText = r.message.pincode;
-                    } else {
-                        postal_code.style = "display: none;"
-                    }
-
-                    if (r.message.city) {
-                        city.innerText = r.message.city;
-                    } else {
-                        city.style = "display: none;"
-                    }
-
-                    if (r.message.country) {
-                        country.innerText = r.message.country;
-                    } else {
-                        country.style = "display: none;"
-                    }
-
-                    if (r.message.phone) {
-                        tel.innerHTML  = r.message.phone;
-                        tel.href = "tel:" + r.message.phone;
-                    } else {
-                        tel.style = "display: none;"
-                    }
-
-                    if (r.message.email_id) {
-                        mail.innerHTML = r.message.email_id;
-                        mail.href = "mailto:" + r.message.email_id;
-                    } else {
-                        mail.style = "display: none;"
-                    }
-
-                },
-            });
-        }
-    </script>
 {% endblock %}

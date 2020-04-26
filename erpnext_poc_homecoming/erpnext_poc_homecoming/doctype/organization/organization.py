@@ -19,11 +19,6 @@ class Organization(WebsiteGenerator):
     #     return context
 
 
-@frappe.whitelist(allow_guest=True)
-def get_address(address_title):
-    return frappe.get_doc("Address", address_title)
-
-
 def get_list_context(context=None):
     context.update({
         "show_sidebar": True,
