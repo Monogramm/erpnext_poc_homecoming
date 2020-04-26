@@ -1,15 +1,17 @@
 {% extends "templates/web.html" %}
 
-{% block title %}{{ heading or _("Map") }}{% endblock %}
+{% block title %}{{ heading or _("Location") }}{% endblock %}
+
+{% set map_docs = frappe.get_all("Organization", fields=["title", "route", "location"]) %}
 
 {% block style %}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <style>
-        #org_map {
-            min-height: 500px;
-        }
-    </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<style>
+    #org_map {
+        min-height: 500px;
+    }
+</style>
 {% endblock %}
 
 {% block page_content %}
@@ -17,4 +19,61 @@
 <div class="map-content">
     <div id="org_map"></div>
 </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    let map = L.map('org_map').setView([48.85, 2.35], 13); //coords of Paris
+
+    L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=FaOWvrcTPKiDQ2FGKKVY", {
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
+            '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+    }).addTo(map);
+
+    function displayDocsOnMap(docs) {
+        let places = docs;
+
+        docs.forEach(doc => {
+            if (doc.location) {
+                let location = typeof doc.location === 'string' ? JSON.parse(doc.location) : doc.location;
+
+                L.marker(location.features[0].geometry.coordinates.reverse()).addTo(map)
+                    .bindPopup('<a href="' + doc.route + '">' + doc.title + '</a>')
+                    .openPopup();
+            }
+        });
+
+    }
+
+    function loadOrganizations() {
+        let current_url = window.location.href.split('/');
+        let api_url = current_url[0] + "//" + current_url[1] + current_url[2] +
+            "/api/method/erpnext_poc_homecoming.erpnext_poc_homecoming.doctype.organization.organization.get_list_map";
+
+        $.ajax({
+            datatype: "json",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('X-Frappe-CSRF-Token', frappe.csrf_token);
+            },
+            url: api_url,
+            success: function (r) {
+                displayDocsOnMap(r.message);
+            },
+        });
+    }
+
+    let mapDocs = [];
+    // Start init JS locations{% for doc in map_docs %}
+    // {% if doc.location %}Start '{{ doc.title }}'
+    mapDocs.push({
+        "title": '{{ doc.title }}',
+        "route": '{{ doc.route }}',
+        "location": {{ doc.location }}
+    });
+    // End '{{ doc.title }}'{% endif %}
+    // End init JS locations{% endfor %}
+
+    // Display docs on the map
+    displayDocsOnMap(mapDocs);
+</script>
 {% endblock %}
