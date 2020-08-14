@@ -1,4 +1,4 @@
-# **erpnext_poc_homecoming** Documentation site
+# **ERPNext POC Homecoming** Documentation site
 
 This directory contains the code for the **ERPNext POC Homecoming** docs site, [monogramm.github.io/erpnext_poc_homecoming](https://monogramm.github.io/erpnext_poc_homecoming).
 
